@@ -1,0 +1,1141 @@
+desc: --pages-as-heap=yes --massif-out-file=./test1.out
+cmd: ./csize -s 17 1mb.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=8192
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=24200
+mem_heap_B=286720
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=56981
+mem_heap_B=10600448
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=71276
+mem_heap_B=10608640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=96226
+mem_heap_B=10620928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2273386
+mem_heap_B=10620928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 10620928 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 10354688 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n2: 196608 0x401007B: _dl_sysdep_read_whole_file (dl-misc.c:57)
+   n1: 196608 0x4016136: _dl_load_cache_lookup (dl-cache.c:201)
+    n1: 196608 0x4008D09: _dl_map_object (dl-load.c:2332)
+     n1: 196608 0x40012F3: map_doit (rtld.c:592)
+      n1: 196608 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+       n1: 196608 0x40195CD: _dl_catch_error (dl-error-skeleton.c:215)
+        n1: 196608 0x400128D: do_preload (rtld.c:763)
+         n1: 196608 0x40050B8: dl_main (rtld.c:1696)
+          n1: 196608 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+           n1: 196608 0x4002116: _dl_start (rtld.c:415)
+            n1: 196608 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+             n1: 196608 0x2: ???
+              n1: 196608 0x1FFF000795: ???
+               n1: 196608 0x1FFF00079D: ???
+                n1: 196608 0x1FFF0007A0: ???
+                 n0: 196608 0x1FFF0007A3: ???
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 2 places, all below massif's threshold (1.00%)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=2273386
+mem_heap_B=10616832
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2353674
+mem_heap_B=10559488
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=4589449
+mem_heap_B=10702848
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=15130481
+mem_heap_B=10838016
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=24887771
+mem_heap_B=10973184
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=33786429
+mem_heap_B=11186176
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=53071541
+mem_heap_B=11321344
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=66991462
+mem_heap_B=11456512
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=70981691
+mem_heap_B=11706368
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=94546405
+mem_heap_B=11841536
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n5: 11841536 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 1167360 0x4CC2306: brk (brk.c:31)
+  n1: 1167360 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 1167360 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 1167360 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 1167360 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 1032192 0x4C563E1: malloc (malloc.c:3049)
+       n2: 1032192 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 675840 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 675840 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 675840 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 675840 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 675840 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 675840 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 675840 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 675840 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n1: 135168 0x4C555F3: tcache_init.part.6 (malloc.c:2979)
+       n1: 135168 0x4C56464: malloc (malloc.c:2975)
+        n1: 135168 0x490A564: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+         n1: 135168 0x400F378: call_init.part.0 (dl-init.c:72)
+          n1: 135168 0x400F474: _dl_init (dl-init.c:118)
+           n1: 135168 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+            n1: 135168 0x2: ???
+             n1: 135168 0x1FFF000795: ???
+              n1: 135168 0x1FFF00079D: ???
+               n1: 135168 0x1FFF0007A0: ???
+                n0: 135168 0x1FFF0007A3: ???
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n1: 249856 0x4CC6132: mmap (mmap64.c:52)
+  n1: 249856 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 249856 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 249856 0x4C563E1: malloc (malloc.c:3049)
+     n1: 249856 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 249856 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 249856 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 249856 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 249856 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 249856 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 249856 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 249856 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 249856 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 249856 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 249856 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 249856 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=108691349
+mem_heap_B=11976704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=123300144
+mem_heap_B=12111872
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=138352237
+mem_heap_B=12247040
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=152330739
+mem_heap_B=12746752
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=155615352
+mem_heap_B=12746752
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n5: 12746752 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 1572864 0x4CC2306: brk (brk.c:31)
+  n1: 1572864 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 1572864 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 1572864 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 1572864 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 1437696 0x4C563E1: malloc (malloc.c:3049)
+       n2: 1437696 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 1081344 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 1081344 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 1081344 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 1081344 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 1081344 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 1081344 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 1081344 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 1081344 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n1: 135168 0x4C555F3: tcache_init.part.6 (malloc.c:2979)
+       n1: 135168 0x4C56464: malloc (malloc.c:2975)
+        n1: 135168 0x490A564: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+         n1: 135168 0x400F378: call_init.part.0 (dl-init.c:72)
+          n1: 135168 0x400F474: _dl_init (dl-init.c:118)
+           n1: 135168 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+            n1: 135168 0x2: ???
+             n1: 135168 0x1FFF000795: ???
+              n1: 135168 0x1FFF00079D: ???
+               n1: 135168 0x1FFF0007A0: ???
+                n0: 135168 0x1FFF0007A3: ???
+ n1: 749568 0x4CC6132: mmap (mmap64.c:52)
+  n1: 749568 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 749568 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 749568 0x4C563E1: malloc (malloc.c:3049)
+     n1: 749568 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 749568 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 749568 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 749568 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 749568 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 749568 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 749568 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 749568 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 749568 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 749568 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 749568 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 749568 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=155615352
+mem_heap_B=12742656
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=157006322
+mem_heap_B=12632064
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=171423020
+mem_heap_B=12767232
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=186070932
+mem_heap_B=12902400
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=200979429
+mem_heap_B=13037568
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=216107779
+mem_heap_B=13172736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=231519347
+mem_heap_B=13307904
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=247051605
+mem_heap_B=13443072
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=262832065
+mem_heap_B=13578240
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=278776979
+mem_heap_B=13713408
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n5: 13713408 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 2789376 0x4CC2306: brk (brk.c:31)
+  n1: 2789376 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 2789376 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 2789376 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 2789376 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 2654208 0x4C563E1: malloc (malloc.c:3049)
+       n2: 2654208 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 2297856 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 2297856 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 2297856 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 2297856 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 2297856 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 2297856 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 2297856 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 2297856 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n1: 499712 0x4CC6132: mmap (mmap64.c:52)
+  n1: 499712 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 499712 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 499712 0x4C563E1: malloc (malloc.c:3049)
+     n1: 499712 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 499712 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 499712 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 499712 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 499712 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 499712 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 499712 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 499712 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 499712 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 499712 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 499712 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 499712 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=295083776
+mem_heap_B=13848576
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=311540559
+mem_heap_B=13983744
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=328228848
+mem_heap_B=14118912
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=329744638
+mem_heap_B=15130624
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=336382856
+mem_heap_B=15130624
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n5: 15130624 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 3194880 0x4CC2306: brk (brk.c:31)
+  n1: 3194880 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 3194880 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 3194880 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 3194880 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 3059712 0x4C563E1: malloc (malloc.c:3049)
+       n2: 3059712 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 2703360 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 2703360 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 2703360 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 2703360 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 2703360 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 2703360 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 2703360 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 2703360 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n1: 1511424 0x4CC6132: mmap (mmap64.c:52)
+  n1: 1511424 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 1511424 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 1511424 0x4C563E1: malloc (malloc.c:3049)
+     n1: 1511424 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 1511424 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 1511424 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 1511424 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 1511424 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 1511424 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 1511424 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 1511424 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 1511424 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 1511424 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 1511424 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 1511424 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=336382856
+mem_heap_B=15126528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=350375838
+mem_heap_B=14766080
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=365799813
+mem_heap_B=14901248
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=381463620
+mem_heap_B=15036416
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=397190321
+mem_heap_B=15171584
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=413064380
+mem_heap_B=15306752
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=429096995
+mem_heap_B=15441920
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=445190131
+mem_heap_B=15577088
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=461408178
+mem_heap_B=15712256
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=477807389
+mem_heap_B=15847424
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n5: 15847424 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 4411392 0x4CC2306: brk (brk.c:31)
+  n1: 4411392 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 4411392 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 4411392 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 4411392 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 4276224 0x4C563E1: malloc (malloc.c:3049)
+       n2: 4276224 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 3919872 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 3919872 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 3919872 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 3919872 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 3919872 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 3919872 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 3919872 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 3919872 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n1: 1011712 0x4CC6132: mmap (mmap64.c:52)
+  n1: 1011712 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 1011712 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 1011712 0x4C563E1: malloc (malloc.c:3049)
+     n1: 1011712 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 1011712 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 1011712 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 1011712 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 1011712 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 1011712 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 1011712 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 1011712 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 1011712 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 1011712 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 1011712 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 1011712 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=494287474
+mem_heap_B=15982592
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=510959787
+mem_heap_B=16117760
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=527711052
+mem_heap_B=16252928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=544582571
+mem_heap_B=16388096
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=561610860
+mem_heap_B=16523264
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=578765502
+mem_heap_B=16658432
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=595986684
+mem_heap_B=16793600
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=613455972
+mem_heap_B=16928768
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=631117632
+mem_heap_B=17063936
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=648778228
+mem_heap_B=17199104
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n5: 17199104 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 5763072 0x4CC2306: brk (brk.c:31)
+  n1: 5763072 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 5763072 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 5763072 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 5763072 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 5627904 0x4C563E1: malloc (malloc.c:3049)
+       n2: 5627904 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 5271552 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 5271552 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 5271552 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 5271552 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 5271552 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 5271552 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 5271552 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 5271552 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n1: 1011712 0x4CC6132: mmap (mmap64.c:52)
+  n1: 1011712 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 1011712 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 1011712 0x4C563E1: malloc (malloc.c:3049)
+     n1: 1011712 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 1011712 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 1011712 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 1011712 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 1011712 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 1011712 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 1011712 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 1011712 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 1011712 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 1011712 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 1011712 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 1011712 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=666567086
+mem_heap_B=17334272
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=684505467
+mem_heap_B=17469440
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=702532835
+mem_heap_B=17604608
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=717649199
+mem_heap_B=19656704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=731127312
+mem_heap_B=19656704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=peak
+n5: 19656704 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF000795: ???
+             n1: 5439488 0x1FFF00079D: ???
+              n1: 5439488 0x1FFF0007A0: ???
+               n0: 5439488 0x1FFF0007A3: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF000795: ???
+             n1: 4579328 0x1FFF00079D: ???
+              n1: 4579328 0x1FFF0007A0: ???
+               n0: 4579328 0x1FFF0007A3: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 6168576 0x4CC2306: brk (brk.c:31)
+  n1: 6168576 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 6168576 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 6168576 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 6168576 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 6033408 0x4C563E1: malloc (malloc.c:3049)
+       n2: 6033408 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 5677056 0x4077D5: __gnu_cxx::new_allocator<std::__detail::_Hash_node<dict, true> >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 5677056 0x4076FA: std::allocator_traits<std::allocator<std::__detail::_Hash_node<dict, true> > >::allocate(std::allocator<std::__detail::_Hash_node<dict, true> >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 5677056 0x4075ED: std::__detail::_Hash_node<dict, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_node<dict const&>(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 5677056 0x407431: std::__detail::_Hash_node<dict, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > >::operator()<dict const&>(dict const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 5677056 0x403D29: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 5677056 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 5677056 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n0: 5677056 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 356352 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 356352 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 356352 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 356352 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 356352 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 356352 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 356352 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 356352 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n1: 356352 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                 n1: 356352 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                  n0: 356352 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n1: 3063808 0x4CC6132: mmap (mmap64.c:52)
+  n1: 3063808 0x4C544B2: sysmalloc (malloc.c:2313)
+   n1: 3063808 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 3063808 0x4C563E1: malloc (malloc.c:3049)
+     n1: 3063808 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 3063808 0x407315: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 3063808 0x4072AA: std::allocator_traits<std::allocator<std::__detail::_Hash_node_base*> >::allocate(std::allocator<std::__detail::_Hash_node_base*>&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 3063808 0x407207: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<dict, true> > >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 3063808 0x403A6A: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_allocate_buckets(unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 3063808 0x4045BD: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 3063808 0x404416: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_rehash(unsigned long, unsigned long const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 3063808 0x403EF2: std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<dict, true>*, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 3063808 0x403D46: std::pair<std::__detail::_Node_iterator<dict, true, true>, bool> std::_Hashtable<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > >(dict const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<dict, true> > > const&, std::integral_constant<bool, true>, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 3063808 0x403C15: std::__detail::_Insert_base<dict, dict, std::allocator<dict>, std::__detail::_Identity, main::$_1, main::$_0, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 3063808 0x40351B: std::unordered_set<dict, main::$_0, main::$_1, std::allocator<dict> >::insert(dict const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 3063808 0x402956: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 266240 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=731127312
+mem_heap_B=19652608
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=733823659
+mem_heap_B=18780160
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=750028123
+mem_heap_B=18915328
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1298673712
+mem_heap_B=18911232
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

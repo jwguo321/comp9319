@@ -1,0 +1,1084 @@
+desc: --pages-as-heap=yes --massif-out-file=./test12.out
+cmd: ./csize -s 18 1mb.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=8192
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=22350
+mem_heap_B=278528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=55158
+mem_heap_B=10592256
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=69453
+mem_heap_B=10600448
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=94242
+mem_heap_B=10612736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2271251
+mem_heap_B=10612736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=peak
+n3: 10612736 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 10354688 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n2: 196608 0x401007B: _dl_sysdep_read_whole_file (dl-misc.c:57)
+   n1: 196608 0x4016136: _dl_load_cache_lookup (dl-cache.c:201)
+    n1: 196608 0x4008D09: _dl_map_object (dl-load.c:2332)
+     n1: 196608 0x40012F3: map_doit (rtld.c:592)
+      n1: 196608 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+       n1: 196608 0x40195CD: _dl_catch_error (dl-error-skeleton.c:215)
+        n1: 196608 0x400128D: do_preload (rtld.c:763)
+         n1: 196608 0x40050B8: dl_main (rtld.c:1696)
+          n1: 196608 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+           n1: 196608 0x4002116: _dl_start (rtld.c:415)
+            n1: 196608 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+             n1: 196608 0x2: ???
+              n1: 196608 0x1FFF00097D: ???
+               n1: 196608 0x1FFF000985: ???
+                n1: 196608 0x1FFF000988: ???
+                 n0: 196608 0x1FFF00098B: ???
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 2 places, all below massif's threshold (1.00%)
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=2271251
+mem_heap_B=10608640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2351557
+mem_heap_B=10551296
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=6073630
+mem_heap_B=10686464
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=22796888
+mem_heap_B=10821632
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=42481078
+mem_heap_B=10956800
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=63528552
+mem_heap_B=11091968
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=85212753
+mem_heap_B=11227136
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=107518057
+mem_heap_B=11362304
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=130512551
+mem_heap_B=11497472
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=154091102
+mem_heap_B=11632640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 11632640 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 1216512 0x4CC2306: brk (brk.c:31)
+  n1: 1216512 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 1216512 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 1216512 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 1216512 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 1081344 0x4C563E1: malloc (malloc.c:3049)
+       n1: 1081344 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 1081344 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 1081344 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 1081344 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 1081344 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 1081344 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 1081344 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 1081344 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 1081344 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 1081344 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n1: 135168 0x4C555F3: tcache_init.part.6 (malloc.c:2979)
+       n1: 135168 0x4C56464: malloc (malloc.c:2975)
+        n1: 135168 0x490A564: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+         n1: 135168 0x400F378: call_init.part.0 (dl-init.c:72)
+          n1: 135168 0x400F474: _dl_init (dl-init.c:118)
+           n1: 135168 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+            n1: 135168 0x2: ???
+             n1: 135168 0x1FFF00097D: ???
+              n1: 135168 0x1FFF000985: ???
+               n1: 135168 0x1FFF000988: ???
+                n0: 135168 0x1FFF00098B: ???
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=178360441
+mem_heap_B=11767808
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=202949745
+mem_heap_B=11902976
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=228192426
+mem_heap_B=12038144
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=253802658
+mem_heap_B=12173312
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=279765558
+mem_heap_B=12308480
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=305761611
+mem_heap_B=12443648
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=332278048
+mem_heap_B=12578816
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=358987924
+mem_heap_B=12713984
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=385807391
+mem_heap_B=12849152
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=413056529
+mem_heap_B=12984320
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 12984320 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 2568192 0x4CC2306: brk (brk.c:31)
+  n1: 2568192 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 2568192 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 2568192 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 2568192 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 2433024 0x4C563E1: malloc (malloc.c:3049)
+       n1: 2433024 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 2433024 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 2433024 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 2433024 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 2433024 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 2433024 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 2433024 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 2433024 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 2433024 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 2433024 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n1: 135168 0x4C555F3: tcache_init.part.6 (malloc.c:2979)
+       n1: 135168 0x4C56464: malloc (malloc.c:2975)
+        n1: 135168 0x490A564: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+         n1: 135168 0x400F378: call_init.part.0 (dl-init.c:72)
+          n1: 135168 0x400F474: _dl_init (dl-init.c:118)
+           n1: 135168 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+            n1: 135168 0x2: ???
+             n1: 135168 0x1FFF00097D: ???
+              n1: 135168 0x1FFF000985: ???
+               n1: 135168 0x1FFF000988: ???
+                n0: 135168 0x1FFF00098B: ???
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=440459895
+mem_heap_B=13119488
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=468182458
+mem_heap_B=13254656
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=496103375
+mem_heap_B=13389824
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=524253522
+mem_heap_B=13524992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=552509583
+mem_heap_B=13660160
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=580914236
+mem_heap_B=13795328
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=609284167
+mem_heap_B=13930496
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=637896886
+mem_heap_B=14065664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=666778433
+mem_heap_B=14200832
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=695642289
+mem_heap_B=14336000
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 14336000 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 3919872 0x4CC2306: brk (brk.c:31)
+  n1: 3919872 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 3919872 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 3919872 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 3919872 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 3784704 0x4C563E1: malloc (malloc.c:3049)
+       n1: 3784704 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 3784704 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 3784704 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 3784704 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 3784704 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 3784704 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 3784704 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 3784704 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 3784704 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 3784704 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=724849489
+mem_heap_B=14471168
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=753969243
+mem_heap_B=14606336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=783332703
+mem_heap_B=14741504
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=812596762
+mem_heap_B=14876672
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=842067695
+mem_heap_B=15011840
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=871914096
+mem_heap_B=15147008
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=901841925
+mem_heap_B=15282176
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=931776264
+mem_heap_B=15417344
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=961881283
+mem_heap_B=15552512
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=992127945
+mem_heap_B=15687680
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 15687680 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 5271552 0x4CC2306: brk (brk.c:31)
+  n1: 5271552 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 5271552 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 5271552 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 5271552 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 5136384 0x4C563E1: malloc (malloc.c:3049)
+       n1: 5136384 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 5136384 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 5136384 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 5136384 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 5136384 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 5136384 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 5136384 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 5136384 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 5136384 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 5136384 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=1022427184
+mem_heap_B=15822848
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1052770447
+mem_heap_B=15958016
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1083307899
+mem_heap_B=16093184
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1113899991
+mem_heap_B=16228352
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1144732732
+mem_heap_B=16363520
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1175569909
+mem_heap_B=16498688
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1206524753
+mem_heap_B=16633856
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1237578986
+mem_heap_B=16769024
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1268810809
+mem_heap_B=16904192
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1299961669
+mem_heap_B=17039360
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 17039360 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 6623232 0x4CC2306: brk (brk.c:31)
+  n1: 6623232 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 6623232 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 6623232 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 6623232 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 6488064 0x4C563E1: malloc (malloc.c:3049)
+       n1: 6488064 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 6488064 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 6488064 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 6488064 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 6488064 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 6488064 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 6488064 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 6488064 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 6488064 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 6488064 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=1331340020
+mem_heap_B=17174528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1362823279
+mem_heap_B=17309696
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1394328280
+mem_heap_B=17444864
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1425990230
+mem_heap_B=17580032
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1457599350
+mem_heap_B=17715200
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1489365507
+mem_heap_B=17850368
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1521300510
+mem_heap_B=17985536
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1553447205
+mem_heap_B=18120704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1585454453
+mem_heap_B=18255872
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1617581988
+mem_heap_B=18391040
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 18391040 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 7974912 0x4CC2306: brk (brk.c:31)
+  n1: 7974912 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 7974912 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 7974912 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 7974912 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 7839744 0x4C563E1: malloc (malloc.c:3049)
+       n1: 7839744 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 7839744 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 7839744 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 7839744 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 7839744 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 7839744 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 7839744 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 7839744 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 7839744 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 7839744 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 258048 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=1649720235
+mem_heap_B=18526208
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1681887825
+mem_heap_B=18661376
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1714223157
+mem_heap_B=18796544
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1746406724
+mem_heap_B=19845120
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1999825839
+mem_heap_B=20893696
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=2256985259
+mem_heap_B=21942272
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=2518041770
+mem_heap_B=22990848
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=2782652383
+mem_heap_B=24039424
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=3050269454
+mem_heap_B=25088000
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=3320240563
+mem_heap_B=26136576
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 26136576 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 10158080 0x401A6F2: mmap (mmap64.c:52)
+  n1: 5484544 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 5484544 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 5439488 0x400D290: openaux (dl-deps.c:64)
+     n1: 5439488 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 5439488 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 5439488 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 5439488 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 5439488 0x4002116: _dl_start (rtld.c:415)
+          n1: 5439488 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 5439488 0x2: ???
+            n1: 5439488 0x1FFF00097D: ???
+             n1: 5439488 0x1FFF000985: ???
+              n1: 5439488 0x1FFF000988: ???
+               n0: 5439488 0x1FFF00098B: ???
+    n0: 45056 in 1 place, below massif's threshold (1.00%)
+  n1: 4612096 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+   n2: 4612096 0x4008A8B: _dl_map_object (dl-load.c:2466)
+    n1: 4579328 0x400D290: openaux (dl-deps.c:64)
+     n1: 4579328 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+      n1: 4579328 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+       n1: 4579328 0x4003AF9: dl_main (rtld.c:1733)
+        n1: 4579328 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+         n1: 4579328 0x4002116: _dl_start (rtld.c:415)
+          n1: 4579328 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+           n1: 4579328 0x2: ???
+            n1: 4579328 0x1FFF00097D: ???
+             n1: 4579328 0x1FFF000985: ???
+              n1: 4579328 0x1FFF000988: ???
+               n0: 4579328 0x1FFF00098B: ???
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+  n0: 61440 in 3 places, all below massif's threshold (1.00%)
+ n1: 8380416 0x4CC2306: brk (brk.c:31)
+  n1: 8380416 0x4CC23E7: sbrk (sbrk.c:56)
+   n1: 8380416 0x4C57E47: __default_morecore (morecore.c:47)
+    n1: 8380416 0x4C54144: sysmalloc (malloc.c:2473)
+     n2: 8380416 0x4C552C7: _int_malloc (malloc.c:4133)
+      n1: 8245248 0x4C563E1: malloc (malloc.c:3049)
+       n1: 8245248 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 8245248 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 8245248 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 8245248 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 8245248 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 8245248 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 8245248 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n1: 8245248 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+               n1: 8245248 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+                n0: 8245248 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n1: 7340032 0x4CC6132: mmap (mmap64.c:52)
+  n1: 7340032 0x4C54379: sysmalloc (malloc.c:2506)
+   n1: 7340032 0x4C552C7: _int_malloc (malloc.c:4133)
+    n1: 7340032 0x4C563E1: malloc (malloc.c:3049)
+     n1: 7340032 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+      n1: 7340032 0x4067E5: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+       n1: 7340032 0x40678A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+        n1: 7340032 0x406692: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+         n1: 7340032 0x40663E: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+          n1: 7340032 0x406611: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+           n1: 7340032 0x406215: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+            n1: 7340032 0x405EE1: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+             n1: 7340032 0x4037BB: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+              n0: 7340032 0x402982: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+ n0: 258048 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=3593182897
+mem_heap_B=27185152
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=3868601850
+mem_heap_B=28233728
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=4146763255
+mem_heap_B=29282304
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

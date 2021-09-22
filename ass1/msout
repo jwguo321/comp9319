@@ -1,0 +1,577 @@
+--------------------------------------------------------------------------------
+Command:            ./csize -s 17 1mb.txt
+Massif arguments:   --pages-as-heap=yes --massif-out-file=./test.out
+ms_print arguments: test.out
+--------------------------------------------------------------------------------
+
+
+    MB
+20.93^                                                                       :
+     |                                                               :::::::::
+     |                                                       :::::::::       :
+     |                                                     :::       :       :
+     |                                             ::::::@::::       :       :
+     |                                     ::::@:::::::::@::::       :       :
+     |                             ::@:::::::::@:::::::::@::::       :       :
+     |                      @::::::::@:::::::::@:::::::::@::::       :       :
+     |              ::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |        :::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |  ::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+     |#:::@::::::::@::::::::@::::::::@:::::::::@:::::::::@::::       :       :
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   2.102
+
+Number of snapshots: 72
+ Detailed snapshots: [5 (peak), 15, 25, 35, 45, 55, 65]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0            8,192            8,192             0            0
+  1         24,200          278,528          278,528             0            0
+  2         57,008       10,592,256       10,592,256             0            0
+  3         71,303       10,600,448       10,600,448             0            0
+  4         96,092       10,612,736       10,612,736             0            0
+  5      2,273,101       10,612,736       10,612,736             0            0
+100.00% (10,612,736B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->97.57% (10,354,688B) 0x401A6F2: mmap (mmap64.c:52)
+| ->51.68% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->51.68% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->51.25% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->51.25% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->51.25% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->51.25% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->51.25% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->51.25% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->51.25% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->51.25% (5,439,488B) 0x2: ???
+| |   |               ->51.25% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->51.25% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->51.25% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->51.25% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.42% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->43.46% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->43.46% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->43.15% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->43.15% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->43.15% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->43.15% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->43.15% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->43.15% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->43.15% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->43.15% (4,579,328B) 0x2: ???
+| |   |               ->43.15% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->43.15% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->43.15% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->43.15% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.31% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->01.85% (196,608B) 0x401007B: _dl_sysdep_read_whole_file (dl-misc.c:57)
+| | ->01.85% (196,608B) 0x4016136: _dl_load_cache_lookup (dl-cache.c:201)
+| | | ->01.85% (196,608B) 0x4008D09: _dl_map_object (dl-load.c:2332)
+| | |   ->01.85% (196,608B) 0x40012F3: map_doit (rtld.c:592)
+| | |     ->01.85% (196,608B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| | |       ->01.85% (196,608B) 0x40195CD: _dl_catch_error (dl-error-skeleton.c:215)
+| | |         ->01.85% (196,608B) 0x400128D: do_preload (rtld.c:763)
+| | |           ->01.85% (196,608B) 0x40050B8: dl_main (rtld.c:1696)
+| | |             ->01.85% (196,608B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| | |               ->01.85% (196,608B) 0x4002116: _dl_start (rtld.c:415)
+| | |                 ->01.85% (196,608B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| | |                   ->01.85% (196,608B) 0x2: ???
+| | |                     ->01.85% (196,608B) 0x1FFF000795: ???
+| | |                       ->01.85% (196,608B) 0x1FFF00079D: ???
+| | |                         ->01.85% (196,608B) 0x1FFF0007A0: ???
+| | |                           ->01.85% (196,608B) 0x1FFF0007A3: ???
+| | |                             
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.58% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.43% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6      2,273,101       10,608,640       10,608,640             0            0
+  7      2,353,389       10,551,296       10,551,296             0            0
+  8      6,083,339       10,686,464       10,686,464             0            0
+  9     22,798,471       10,821,632       10,821,632             0            0
+ 10     42,496,324       10,956,800       10,956,800             0            0
+ 11     63,548,013       11,091,968       11,091,968             0            0
+ 12     85,228,575       11,227,136       11,227,136             0            0
+ 13    107,532,098       11,362,304       11,362,304             0            0
+ 14    130,514,134       11,497,472       11,497,472             0            0
+ 15    154,104,959       11,632,640       11,632,640             0            0
+100.00% (11,632,640B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->87.32% (10,158,080B) 0x401A6F2: mmap (mmap64.c:52)
+| ->47.15% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->47.15% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->46.76% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->46.76% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->46.76% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->46.76% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->46.76% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->46.76% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->46.76% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->46.76% (5,439,488B) 0x2: ???
+| |   |               ->46.76% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->46.76% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->46.76% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->46.76% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.39% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->39.65% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->39.65% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->39.37% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->39.37% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->39.37% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->39.37% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->39.37% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->39.37% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->39.37% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->39.37% (4,579,328B) 0x2: ???
+| |   |               ->39.37% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->39.37% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->39.37% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->39.37% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.28% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.53% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->10.46% (1,216,512B) 0x4CC2306: brk (brk.c:31)
+| ->10.46% (1,216,512B) 0x4CC23E7: sbrk (sbrk.c:56)
+|   ->10.46% (1,216,512B) 0x4C57E47: __default_morecore (morecore.c:47)
+|     ->10.46% (1,216,512B) 0x4C54144: sysmalloc (malloc.c:2473)
+|       ->10.46% (1,216,512B) 0x4C552C7: _int_malloc (malloc.c:4133)
+|         ->09.30% (1,081,344B) 0x4C563E1: malloc (malloc.c:3049)
+|         | ->09.30% (1,081,344B) 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|         |   ->09.30% (1,081,344B) 0x406785: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |     ->09.30% (1,081,344B) 0x40672A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |       ->09.30% (1,081,344B) 0x406632: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |         ->09.30% (1,081,344B) 0x4065DE: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |           ->09.30% (1,081,344B) 0x4065B1: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |             ->09.30% (1,081,344B) 0x4061B5: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |               ->09.30% (1,081,344B) 0x405E81: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                 ->09.30% (1,081,344B) 0x40375B: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                   ->09.30% (1,081,344B) 0x402944: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                     
+|         ->01.16% (135,168B) 0x4C555F3: tcache_init.part.6 (malloc.c:2979)
+|           ->01.16% (135,168B) 0x4C56464: malloc (malloc.c:2975)
+|             ->01.16% (135,168B) 0x490A564: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|               ->01.16% (135,168B) 0x400F378: call_init.part.0 (dl-init.c:72)
+|                 ->01.16% (135,168B) 0x400F474: _dl_init (dl-init.c:118)
+|                   ->01.16% (135,168B) 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+|                     ->01.16% (135,168B) 0x2: ???
+|                       ->01.16% (135,168B) 0x1FFF000795: ???
+|                         ->01.16% (135,168B) 0x1FFF00079D: ???
+|                           ->01.16% (135,168B) 0x1FFF0007A0: ???
+|                             ->01.16% (135,168B) 0x1FFF0007A3: ???
+|                               
+->02.22% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 16    178,377,544       11,767,808       11,767,808             0            0
+ 17    202,963,813       11,902,976       11,902,976             0            0
+ 18    228,209,740       12,038,144       12,038,144             0            0
+ 19    253,804,241       12,173,312       12,173,312             0            0
+ 20    279,783,650       12,308,480       12,308,480             0            0
+ 21    305,779,033       12,443,648       12,443,648             0            0
+ 22    332,295,804       12,578,816       12,578,816             0            0
+ 23    359,004,563       12,713,984       12,713,984             0            0
+ 24    385,808,974       12,849,152       12,849,152             0            0
+ 25    413,074,880       12,984,320       12,984,320             0            0
+100.00% (12,984,320B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->78.23% (10,158,080B) 0x401A6F2: mmap (mmap64.c:52)
+| ->42.24% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->42.24% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->41.89% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->41.89% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->41.89% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->41.89% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->41.89% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->41.89% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->41.89% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->41.89% (5,439,488B) 0x2: ???
+| |   |               ->41.89% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->41.89% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->41.89% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->41.89% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.35% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->35.52% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->35.52% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->35.27% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->35.27% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->35.27% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->35.27% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->35.27% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->35.27% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->35.27% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->35.27% (4,579,328B) 0x2: ???
+| |   |               ->35.27% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->35.27% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->35.27% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->35.27% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.25% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.47% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->19.78% (2,568,192B) 0x4CC2306: brk (brk.c:31)
+| ->19.78% (2,568,192B) 0x4CC23E7: sbrk (sbrk.c:56)
+|   ->19.78% (2,568,192B) 0x4C57E47: __default_morecore (morecore.c:47)
+|     ->19.78% (2,568,192B) 0x4C54144: sysmalloc (malloc.c:2473)
+|       ->19.78% (2,568,192B) 0x4C552C7: _int_malloc (malloc.c:4133)
+|         ->18.74% (2,433,024B) 0x4C563E1: malloc (malloc.c:3049)
+|         | ->18.74% (2,433,024B) 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|         |   ->18.74% (2,433,024B) 0x406785: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |     ->18.74% (2,433,024B) 0x40672A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |       ->18.74% (2,433,024B) 0x406632: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |         ->18.74% (2,433,024B) 0x4065DE: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |           ->18.74% (2,433,024B) 0x4065B1: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |             ->18.74% (2,433,024B) 0x4061B5: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |               ->18.74% (2,433,024B) 0x405E81: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                 ->18.74% (2,433,024B) 0x40375B: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                   ->18.74% (2,433,024B) 0x402944: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                     
+|         ->01.04% (135,168B) 0x4C555F3: tcache_init.part.6 (malloc.c:2979)
+|           ->01.04% (135,168B) 0x4C56464: malloc (malloc.c:2975)
+|             ->01.04% (135,168B) 0x490A564: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|               ->01.04% (135,168B) 0x400F378: call_init.part.0 (dl-init.c:72)
+|                 ->01.04% (135,168B) 0x400F474: _dl_init (dl-init.c:118)
+|                   ->01.04% (135,168B) 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+|                     ->01.04% (135,168B) 0x2: ???
+|                       ->01.04% (135,168B) 0x1FFF000795: ???
+|                         ->01.04% (135,168B) 0x1FFF00079D: ???
+|                           ->01.04% (135,168B) 0x1FFF0007A0: ???
+|                             ->01.04% (135,168B) 0x1FFF0007A3: ???
+|                               
+->01.99% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 26    440,478,496       13,119,488       13,119,488             0            0
+ 27    468,196,808       13,254,656       13,254,656             0            0
+ 28    496,121,480       13,389,824       13,389,824             0            0
+ 29    524,255,105       13,524,992       13,524,992             0            0
+ 30    552,528,047       13,660,160       13,660,160             0            0
+ 31    580,932,374       13,795,328       13,795,328             0            0
+ 32    609,301,418       13,930,496       13,930,496             0            0
+ 33    637,918,327       14,065,664       14,065,664             0            0
+ 34    666,780,016       14,200,832       14,200,832             0            0
+ 35    695,660,361       14,336,000       14,336,000             0            0
+100.00% (14,336,000B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->70.86% (10,158,080B) 0x401A6F2: mmap (mmap64.c:52)
+| ->38.26% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->38.26% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->37.94% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->37.94% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->37.94% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->37.94% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->37.94% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->37.94% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->37.94% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->37.94% (5,439,488B) 0x2: ???
+| |   |               ->37.94% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->37.94% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->37.94% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->37.94% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.31% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->32.17% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->32.17% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->31.94% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->31.94% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->31.94% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->31.94% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->31.94% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->31.94% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->31.94% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->31.94% (4,579,328B) 0x2: ???
+| |   |               ->31.94% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->31.94% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->31.94% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->31.94% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.23% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.43% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->27.34% (3,919,872B) 0x4CC2306: brk (brk.c:31)
+| ->27.34% (3,919,872B) 0x4CC23E7: sbrk (sbrk.c:56)
+|   ->27.34% (3,919,872B) 0x4C57E47: __default_morecore (morecore.c:47)
+|     ->27.34% (3,919,872B) 0x4C54144: sysmalloc (malloc.c:2473)
+|       ->27.34% (3,919,872B) 0x4C552C7: _int_malloc (malloc.c:4133)
+|         ->26.40% (3,784,704B) 0x4C563E1: malloc (malloc.c:3049)
+|         | ->26.40% (3,784,704B) 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|         |   ->26.40% (3,784,704B) 0x406785: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |     ->26.40% (3,784,704B) 0x40672A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |       ->26.40% (3,784,704B) 0x406632: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |         ->26.40% (3,784,704B) 0x4065DE: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |           ->26.40% (3,784,704B) 0x4065B1: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |             ->26.40% (3,784,704B) 0x4061B5: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |               ->26.40% (3,784,704B) 0x405E81: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                 ->26.40% (3,784,704B) 0x40375B: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                   ->26.40% (3,784,704B) 0x402944: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                     
+|         ->00.94% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->01.80% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36    724,867,191       14,471,168       14,471,168             0            0
+ 37    753,986,997       14,606,336       14,606,336             0            0
+ 38    783,354,284       14,741,504       14,741,504             0            0
+ 39    812,598,345       14,876,672       14,876,672             0            0
+ 40    842,084,598       15,011,840       15,011,840             0            0
+ 41    871,935,195       15,147,008       15,147,008             0            0
+ 42    901,860,826       15,282,176       15,282,176             0            0
+ 43    931,794,521       15,417,344       15,417,344             0            0
+ 44    961,882,866       15,552,512       15,552,512             0            0
+ 45    992,146,328       15,687,680       15,687,680             0            0
+100.00% (15,687,680B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->64.75% (10,158,080B) 0x401A6F2: mmap (mmap64.c:52)
+| ->34.96% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->34.96% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->34.67% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->34.67% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->34.67% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->34.67% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->34.67% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->34.67% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->34.67% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->34.67% (5,439,488B) 0x2: ???
+| |   |               ->34.67% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->34.67% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->34.67% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->34.67% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.29% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->29.40% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->29.40% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->29.19% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->29.19% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->29.19% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->29.19% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->29.19% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->29.19% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->29.19% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->29.19% (4,579,328B) 0x2: ???
+| |   |               ->29.19% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->29.19% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->29.19% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->29.19% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.21% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.39% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->33.60% (5,271,552B) 0x4CC2306: brk (brk.c:31)
+| ->33.60% (5,271,552B) 0x4CC23E7: sbrk (sbrk.c:56)
+|   ->33.60% (5,271,552B) 0x4C57E47: __default_morecore (morecore.c:47)
+|     ->33.60% (5,271,552B) 0x4C54144: sysmalloc (malloc.c:2473)
+|       ->33.60% (5,271,552B) 0x4C552C7: _int_malloc (malloc.c:4133)
+|         ->32.74% (5,136,384B) 0x4C563E1: malloc (malloc.c:3049)
+|         | ->32.74% (5,136,384B) 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|         |   ->32.74% (5,136,384B) 0x406785: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |     ->32.74% (5,136,384B) 0x40672A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |       ->32.74% (5,136,384B) 0x406632: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |         ->32.74% (5,136,384B) 0x4065DE: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |           ->32.74% (5,136,384B) 0x4065B1: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |             ->32.74% (5,136,384B) 0x4061B5: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |               ->32.74% (5,136,384B) 0x405E81: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                 ->32.74% (5,136,384B) 0x40375B: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                   ->32.74% (5,136,384B) 0x402944: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                     
+|         ->00.86% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->01.64% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46  1,022,445,499       15,822,848       15,822,848             0            0
+ 47  1,052,788,313       15,958,016       15,958,016             0            0
+ 48  1,083,325,446       16,093,184       16,093,184             0            0
+ 49  1,113,901,574       16,228,352       16,228,352             0            0
+ 50  1,144,752,148       16,363,520       16,363,520             0            0
+ 51  1,175,592,010       16,498,688       16,498,688             0            0
+ 52  1,206,546,733       16,633,856       16,633,856             0            0
+ 53  1,237,600,175       16,769,024       16,769,024             0            0
+ 54  1,268,812,392       16,904,192       16,904,192             0            0
+ 55  1,299,980,148       17,039,360       17,039,360             0            0
+100.00% (17,039,360B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->59.62% (10,158,080B) 0x401A6F2: mmap (mmap64.c:52)
+| ->32.19% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->32.19% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->31.92% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->31.92% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->31.92% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->31.92% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->31.92% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->31.92% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->31.92% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->31.92% (5,439,488B) 0x2: ???
+| |   |               ->31.92% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->31.92% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->31.92% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->31.92% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.26% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->27.07% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->27.07% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->26.88% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->26.88% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->26.88% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->26.88% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->26.88% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->26.88% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->26.88% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->26.88% (4,579,328B) 0x2: ???
+| |   |               ->26.88% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->26.88% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->26.88% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->26.88% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.19% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.36% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->38.87% (6,623,232B) 0x4CC2306: brk (brk.c:31)
+| ->38.87% (6,623,232B) 0x4CC23E7: sbrk (sbrk.c:56)
+|   ->38.87% (6,623,232B) 0x4C57E47: __default_morecore (morecore.c:47)
+|     ->38.87% (6,623,232B) 0x4C54144: sysmalloc (malloc.c:2473)
+|       ->38.87% (6,623,232B) 0x4C552C7: _int_malloc (malloc.c:4133)
+|         ->38.08% (6,488,064B) 0x4C563E1: malloc (malloc.c:3049)
+|         | ->38.08% (6,488,064B) 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|         |   ->38.08% (6,488,064B) 0x406785: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |     ->38.08% (6,488,064B) 0x40672A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |       ->38.08% (6,488,064B) 0x406632: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |         ->38.08% (6,488,064B) 0x4065DE: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |           ->38.08% (6,488,064B) 0x4065B1: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |             ->38.08% (6,488,064B) 0x4061B5: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |               ->38.08% (6,488,064B) 0x405E81: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                 ->38.08% (6,488,064B) 0x40375B: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                   ->38.08% (6,488,064B) 0x402944: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                     
+|         ->00.79% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->01.51% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56  1,331,359,314       17,174,528       17,174,528             0            0
+ 57  1,362,843,896       17,309,696       17,309,696             0            0
+ 58  1,394,347,914       17,444,864       17,444,864             0            0
+ 59  1,425,991,813       17,580,032       17,580,032             0            0
+ 60  1,457,617,985       17,715,200       17,715,200             0            0
+ 61  1,489,384,459       17,850,368       17,850,368             0            0
+ 62  1,521,324,667       17,985,536       17,985,536             0            0
+ 63  1,553,466,364       18,120,704       18,120,704             0            0
+ 64  1,585,456,036       18,255,872       18,255,872             0            0
+ 65  1,617,600,686       18,391,040       18,391,040             0            0
+100.00% (18,391,040B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->55.23% (10,158,080B) 0x401A6F2: mmap (mmap64.c:52)
+| ->29.82% (5,484,544B) 0x40061EF: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->29.82% (5,484,544B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->29.58% (5,439,488B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->29.58% (5,439,488B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->29.58% (5,439,488B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->29.58% (5,439,488B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->29.58% (5,439,488B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->29.58% (5,439,488B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->29.58% (5,439,488B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->29.58% (5,439,488B) 0x2: ???
+| |   |               ->29.58% (5,439,488B) 0x1FFF000795: ???
+| |   |                 ->29.58% (5,439,488B) 0x1FFF00079D: ???
+| |   |                   ->29.58% (5,439,488B) 0x1FFF0007A0: ???
+| |   |                     ->29.58% (5,439,488B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.24% (45,056B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->25.08% (4,612,096B) 0x4006342: _dl_map_object_from_fd (dl-map-segments.h:94)
+| | ->25.08% (4,612,096B) 0x4008A8B: _dl_map_object (dl-load.c:2466)
+| |   ->24.90% (4,579,328B) 0x400D290: openaux (dl-deps.c:64)
+| |   | ->24.90% (4,579,328B) 0x4019569: _dl_catch_exception (dl-error-skeleton.c:196)
+| |   |   ->24.90% (4,579,328B) 0x400D604: _dl_map_object_deps (dl-deps.c:248)
+| |   |     ->24.90% (4,579,328B) 0x4003AF9: dl_main (rtld.c:1733)
+| |   |       ->24.90% (4,579,328B) 0x401864E: _dl_sysdep_start (dl-sysdep.c:253)
+| |   |         ->24.90% (4,579,328B) 0x4002116: _dl_start (rtld.c:415)
+| |   |           ->24.90% (4,579,328B) 0x4001096: ??? (in /lib/x86_64-linux-gnu/ld-2.28.so)
+| |   |             ->24.90% (4,579,328B) 0x2: ???
+| |   |               ->24.90% (4,579,328B) 0x1FFF000795: ???
+| |   |                 ->24.90% (4,579,328B) 0x1FFF00079D: ???
+| |   |                   ->24.90% (4,579,328B) 0x1FFF0007A0: ???
+| |   |                     ->24.90% (4,579,328B) 0x1FFF0007A3: ???
+| |   |                       
+| |   ->00.18% (32,768B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.33% (61,440B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->43.36% (7,974,912B) 0x4CC2306: brk (brk.c:31)
+| ->43.36% (7,974,912B) 0x4CC23E7: sbrk (sbrk.c:56)
+|   ->43.36% (7,974,912B) 0x4C57E47: __default_morecore (morecore.c:47)
+|     ->43.36% (7,974,912B) 0x4C54144: sysmalloc (malloc.c:2473)
+|       ->43.36% (7,974,912B) 0x4C552C7: _int_malloc (malloc.c:4133)
+|         ->42.63% (7,839,744B) 0x4C563E1: malloc (malloc.c:3049)
+|         | ->42.63% (7,839,744B) 0x490E043: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|         |   ->42.63% (7,839,744B) 0x406785: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(unsigned long, void const*) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |     ->42.63% (7,839,744B) 0x40672A: std::allocator_traits<std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::allocate(std::allocator<std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, unsigned long) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |       ->42.63% (7,839,744B) 0x406632: std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_get_node() (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |         ->42.63% (7,839,744B) 0x4065DE: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_create_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |           ->42.63% (7,839,744B) 0x4065B1: std::_Rb_tree_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >* std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node::operator()<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |             ->42.63% (7,839,744B) 0x4061B5: std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_Alloc_node&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |               ->42.63% (7,839,744B) 0x405E81: std::pair<std::_Rb_tree_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, bool> std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::_Identity<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_unique<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                 ->42.63% (7,839,744B) 0x40375B: std::set<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::insert(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                   ->42.63% (7,839,744B) 0x402944: main (in /tmp_amd/cage/export/cage/5/z5238914/Desktop/9319/csize)
+|         |                     
+|         ->00.73% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->01.40% (258,048B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 66  1,649,742,114       18,526,208       18,526,208             0            0
+ 67  1,681,906,088       18,661,376       18,661,376             0            0
+ 68  1,714,243,658       18,796,544       18,796,544             0            0
+ 69  1,746,408,307       19,845,120       19,845,120             0            0
+ 70  1,999,827,492       20,893,696       20,893,696             0            0
+ 71  2,256,986,912       21,942,272       21,942,272             0            0
